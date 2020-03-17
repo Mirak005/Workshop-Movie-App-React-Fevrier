@@ -1,19 +1,20 @@
 import React from "react";
 
-function Rating(  { rate  , getRate = ()=> {}  }) {
+function Rating({ rate, getRate = () => {} }) {
   const stars = rate => {
     let starArray = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= rate) {
         starArray.push(
           <i
+            key={i}
             className="fas fa-star star-gold"
             onClick={() => getRate(i)}
           ></i>
         );
       } else
         starArray.push(
-          <i className="fas fa-star" onClick={() => getRate(i)}></i>
+          <i key={i} className="fas fa-star" onClick={() => getRate(i)}></i>
         );
     }
 

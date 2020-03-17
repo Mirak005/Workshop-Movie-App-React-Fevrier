@@ -45,7 +45,7 @@ class AddMovie extends React.Component {
     return (
       <div>
         <button className="Add-btn" onClick={this.openModal}>
-          Add Movie{" "}
+          Add Movie
         </button>
         <Modal
           className="add-modal"
@@ -55,7 +55,11 @@ class AddMovie extends React.Component {
           <h2>Add A Movie</h2>
           <form onSubmit={this.handelAddMovie}>
             <label>Movie Name</label>
-            <input onChange={this.handleAdd} type="text" name="title" />
+            <input
+             onChange={this.handleAdd} 
+             type="text"
+              name="title" 
+              />
             <label>Movie Rate</label>
             <input
               onChange={this.handleAdd}
@@ -64,12 +68,18 @@ class AddMovie extends React.Component {
               name="rate"
             />
             <label>Movie Release Year</label>
-            <input onChange={this.handleAdd} type="text" name="year" />
+            <input 
+            onChange={this.handleAdd} 
+            type="text"
+             name="year" />
             <label>Movie Image</label>
-            <input onChange={this.handleAdd} type="url" name="image" />
+            <input
+             onChange={this.handleAdd}
+             type="url"
+              name="image" />
 
             <div className="form-btn-container">
-              <button  className="btn btn-modal">Add Movie</button>
+              <button className="btn btn-modal">Add Movie</button>
               <button className="btn btn-modal" onClick={this.closeModal}>
                 Cancel
               </button>
